@@ -1,12 +1,18 @@
 import fire
 from bcy_scraper.gdl_runner import GdlRunner
 
-
-
-def main(file_path:str, download_dir):
-    demo_download_dir = r"D:\Andrew\Pictures\==Train\download_bench"
+def main(file_path:str, download_dir:str="bcy"):
+    """
+    :param file_path: the txt file path
+    :param download_dir: dir to save responses
+    :return:
+    """
     runner = GdlRunner()
-    runner.check_and_update_csv(file_path.replace('.txt', '.csv'), file_path)
+
+    handles = runner.read_handles(file_path)
+    for handle in handles:
+        runner.run_gallery_dl(handle, download_dir)
+
 
 
 if __name__ == '__main__':
