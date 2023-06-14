@@ -1,6 +1,6 @@
 import subprocess
 from pathlib import Path
-from tqdm.auto import tqdm
+
 import csv
 import datetime
 from typing import Optional
