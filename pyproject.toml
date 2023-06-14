@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "bcy-scraper"
+version = "0.1.0"
+description = "bcy.net scraper"
+authors = ["yada <trojblue@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+packages = [{include = "bcy_scraper"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tqdm = "^4.65.0"
+fire = "^0.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
