@@ -22,6 +22,7 @@ class FolderHandler:
             print(f"No JSON data found in {directory}.")
             return
 
+        print("HERE")
         self._save_as_parquet(df, directory)
         self._copy_info_json(directory)
         self._rename_associated_jsons(directory)
@@ -48,13 +49,13 @@ class FolderHandler:
             'likes': json_dict['post']['likes'],
             'shares': json_dict['post']['shares'],
             'replies': json_dict['post']['replies'],
-            'type': json_dict['post']['image_list'][0]['type'],
-            'mid': json_dict['post']['image_list'][0]['mid'],
-            'w': json_dict['post']['image_list'][0]['w'],
-            'h': json_dict['post']['image_list'][0]['h'],
-            'original_path': json_dict['post']['image_list'][0]['original_path'],
-            'visible_level': json_dict['post']['image_list'][0]['visible_level'],
-            'format': json_dict['post']['image_list'][0]['format'],
+            # 'type': json_dict['post']['image_list'][0]['type'],
+            # 'mid': json_dict['post']['image_list'][0]['mid'],
+            # 'w': json_dict['post']['image_list'][0]['w'],
+            # 'h': json_dict['post']['image_list'][0]['h'],
+            # 'original_path': json_dict['post']['image_list'][0]['original_path'],
+            # 'visible_level': json_dict['post']['image_list'][0]['visible_level'],
+            # 'format': json_dict['post']['image_list'][0]['format'],
             'category': json_dict['category'],
             'subcategory': json_dict['subcategory'],
             'num': json_dict['num'],
