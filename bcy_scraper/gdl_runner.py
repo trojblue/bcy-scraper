@@ -13,13 +13,13 @@ class GdlRunner:
     ):
         self.check_interval = datetime.timedelta(days=check_interval_days)
         self.dst_dir = dst_dir
-        self.logger = logger or PipelineLogger("gallery_dl")
+        self.logger = logger or PipelineLogger("logs")
 
         # filters: python语法, 变量名见和图片一起保存的json
         self.filters = {
             "width": ">= 512",
             "height": ">= 512",
-            "extension": "not in ('mp4')",
+            # "extension": "not in ('mp4')",
         }
 
     @staticmethod
